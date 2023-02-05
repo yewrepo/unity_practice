@@ -41,9 +41,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\PixelCrew\Components\ReloadLevelComponent.cs" />
      <Compile Include="Assets\PixelCrew\Hero.cs" />
      <Compile Include="Assets\PixelCrew\HeroInputReader.cs" />
      <Compile Include="Assets\UserInput\HeroInputActions.cs" />
+     <Compile Include="Assets\PixelCrew\Components\EnterTriggerComponent.cs" />
      <Compile Include="Assets\PixelCrew\LayerCheck.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
@@ -54,6 +56,7 @@
      <Folder Include="Assets\PixelCrew" />
      <Folder Include="Assets\Textures\Environment" />
      <Folder Include="Assets\Textures\Chars" />
+     <Folder Include="Assets\PixelCrew\Components" />
      <Reference Include="UnityEngine">
      <HintPath>E:\Program Files\Unity Hub\Editor\2022.1.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
