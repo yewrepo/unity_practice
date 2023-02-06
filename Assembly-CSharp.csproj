@@ -41,13 +41,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\PixelCrew\Components\DestroyObjectComponent.cs" />
      <Compile Include="Assets\PixelCrew\Components\ReloadLevelComponent.cs" />
      <Compile Include="Assets\PixelCrew\Hero.cs" />
      <Compile Include="Assets\PixelCrew\HeroInputReader.cs" />
      <Compile Include="Assets\UserInput\HeroInputActions.cs" />
      <Compile Include="Assets\PixelCrew\Components\EnterTriggerComponent.cs" />
      <Compile Include="Assets\PixelCrew\LayerCheck.cs" />
+     <Compile Include="Assets\PixelCrew\FollowTarget.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\TilePalette\Outdoor" />
+     <Folder Include="Assets\TilePalette" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Textures\TileMaps" />
      <Folder Include="Assets\Textures" />
@@ -57,6 +61,7 @@
      <Folder Include="Assets\Textures\Environment" />
      <Folder Include="Assets\Textures\Chars" />
      <Folder Include="Assets\PixelCrew\Components" />
+     <Folder Include="Assets\Tilemap" />
      <Reference Include="UnityEngine">
      <HintPath>E:\Program Files\Unity Hub\Editor\2022.1.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -833,6 +838,12 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
