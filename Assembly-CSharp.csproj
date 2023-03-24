@@ -50,18 +50,31 @@
      <Compile Include="Assets\PixelCrew\LayerCheck.cs" />
      <Compile Include="Assets\PixelCrew\FollowTarget.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\Textures\Chars\Captain\08-Dead Ground" />
      <Folder Include="Assets\TilePalette\Outdoor" />
      <Folder Include="Assets\TilePalette" />
+     <Folder Include="Assets\Textures\Chars\Captain\04-Fall" />
+     <Folder Include="Assets\Textures\Chars\Captain\07-Dead Hit" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Textures\TileMaps" />
+     <Folder Include="Assets\Textures\Chars\Captain\05-Ground" />
+     <Folder Include="Assets\Prefabs\Creatures" />
      <Folder Include="Assets\Textures" />
+     <Folder Include="Assets\Textures\Chars\Captain\01-Idle" />
+     <Folder Include="Assets\Textures\Chars\Captain\02-Run" />
      <Folder Include="Assets\UserInput" />
      <Folder Include="Assets\Textures\Props 1" />
+     <Folder Include="Assets\Prefabs\Creatures\Hero" />
      <Folder Include="Assets\PixelCrew" />
+     <Folder Include="Assets\Prefabs\Creatures\Hero\Animations" />
      <Folder Include="Assets\Textures\Environment" />
+     <Folder Include="Assets\Textures\Chars\Captain\06-Hit" />
+     <Folder Include="Assets\Textures\Chars\Captain\03-Jump" />
      <Folder Include="Assets\Textures\Chars" />
      <Folder Include="Assets\PixelCrew\Components" />
+     <Folder Include="Assets\Textures\Chars\Captain" />
      <Folder Include="Assets\Tilemap" />
+     <Folder Include="Assets\Prefabs" />
      <Reference Include="UnityEngine">
      <HintPath>E:\Program Files\Unity Hub\Editor\2022.1.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -331,12 +344,6 @@
      </Reference>
      <Reference Include="Newtonsoft.Json">
      <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Android.Types">
-     <HintPath>E:\Program Files\Unity Hub\Editor\2022.1.23f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Android.Gradle">
-     <HintPath>E:\Program Files\Unity Hub\Editor\2022.1.23f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>E:\Program Files\Unity Hub\Editor\2022.1.23f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -794,11 +801,17 @@
      <Reference Include="Unity.2D.IK.Runtime">
      <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
      <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst">
      <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
      <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
@@ -838,12 +851,6 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-     </Reference>
-     <Reference Include="com.unity.cinemachine.editor">
-     <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Cinemachine">
-     <HintPath>C:\Users\omega\UnityProject\My project (1)\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
