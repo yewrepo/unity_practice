@@ -8,6 +8,7 @@ namespace PixelCrew
         [SerializeField] private float jumpSpeed;
         [SerializeField] private LayerCheck layerCheck;
 
+        private SpriteRenderer _spriteRenderer;
         private Rigidbody2D _body;
         private Vector2 _direction;
         private Animator _animator;
@@ -24,6 +25,7 @@ namespace PixelCrew
         {
             _body = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         private void FixedUpdate()
@@ -47,6 +49,20 @@ namespace PixelCrew
             _animator.SetFloat(velocityProp, _body.velocity.y);
             _animator.SetBool(isRunningProp, _direction.x != 0);
             _animator.SetBool(isGroundProp, isGrounded);
+
+            UpdateSpriteDirection();
+        }
+
+        private void UpdateSpriteDirection()
+        {
+            if (_direction.x > 0)
+            {
+                _spriteRenderer.flipX = false;
+            }
+            else if (_direction.x < 0)
+            {
+                _spriteRenderer.flipX = true;
+            }
         }
 
         private bool IsGrounded()
