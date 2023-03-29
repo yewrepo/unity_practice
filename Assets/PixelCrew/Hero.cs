@@ -1,3 +1,5 @@
+using System;
+using TMPro.EditorUtilities;
 using UnityEngine;
 
 namespace PixelCrew
@@ -12,6 +14,9 @@ namespace PixelCrew
         private Rigidbody2D _body;
         private Vector2 _direction;
         private Animator _animator;
+        private bool _isGrounded;
+        private bool _allowDoubleJump;
+
         private static readonly int velocityProp = Animator.StringToHash("vertical-velocity");
         private static readonly int isRunningProp = Animator.StringToHash("is-running");
         private static readonly int isGroundProp = Animator.StringToHash("is-ground");
@@ -30,27 +35,63 @@ namespace PixelCrew
 
         private void FixedUpdate()
         {
-            _body.velocity = new Vector2(_direction.x * speed, _body.velocity.y);
-
-            var isGrounded = IsGrounded();
-            var isJumping = _direction.y > 0;
-            if (isJumping)
-            {
-                if (IsGrounded() && _body.velocity.y <= 0)
-                {
-                    _body.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
-                }
-            }
-            else if (_body.velocity.y > 0)
-            {
-                _body.velocity = new Vector2(_body.velocity.x, _body.velocity.y * 0.5f);
-            }
+            var xVelocity = _direction.x * speed;
+            var yVelocity = CalculateYVelocity();
+            _body.velocity = new Vector2(xVelocity, yVelocity);
 
             _animator.SetFloat(velocityProp, _body.velocity.y);
             _animator.SetBool(isRunningProp, _direction.x != 0);
-            _animator.SetBool(isGroundProp, isGrounded);
+            _animator.SetBool(isGroundProp, _isGrounded);
 
             UpdateSpriteDirection();
+        }
+
+        private void Update()
+        {
+            _isGrounded = IsGrounded();
+        }
+
+        private float CalculateYVelocity()
+        {
+            var yVelocity = _body.velocity.y;
+            var isJumpPressed = _direction.y > 0;
+
+            if (_isGrounded)
+            {
+                _allowDoubleJump = true;
+            }
+
+            if (isJumpPressed)
+            {
+                yVelocity = CalculateJumpVelocity(yVelocity);
+            }
+            else if (_body.velocity.y > 0)
+            {
+                yVelocity *= 0.5f;
+            }
+
+            return yVelocity;
+        }
+
+        private float CalculateJumpVelocity(float yVelocity)
+        {
+            var isFalling = _body.velocity.y <= 0.001f;
+            if (!isFalling)
+            {
+                return yVelocity;
+            }
+
+            if (_isGrounded)
+            {
+                yVelocity += jumpSpeed;
+            }
+            else if (_allowDoubleJump)
+            {
+                _allowDoubleJump = false;
+                yVelocity = jumpSpeed;
+            }
+
+            return yVelocity;
         }
 
         private void UpdateSpriteDirection()

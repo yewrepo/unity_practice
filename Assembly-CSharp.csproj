@@ -50,6 +50,7 @@
      <Compile Include="Assets\PixelCrew\LayerCheck.cs" />
      <Compile Include="Assets\PixelCrew\FollowTarget.cs" />
      <Compile Include="Assets\PixelCrew\SpriteAnimation.cs" />
+     <Compile Include="Assets\PixelCrew\CheatController.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Textures\Chars\Captain\08-Dead Ground" />
      <Folder Include="Assets\TilePalette\Outdoor" />
